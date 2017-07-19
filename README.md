@@ -1,15 +1,18 @@
-# sample-systemjs-gridstack
-JSPM 0.17, SystemJS 0.20 - utilizing GridStack 0.3.0 with drag-and-drop
+# sample-aurelia-i18n-i230
+Aurelia, JSPM 0.17, SystemJS 0.20 - utilizing aurelia-i18n
 
 ## Install packages
 
 ```
 npm install
 jspm install
+typings install
 ```
 
-## Serve
+## Compile, Serve, Run
 
 ```
-gulp serve
+gulp
 ```
+
+(Default task)
