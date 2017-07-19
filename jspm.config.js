@@ -2,7 +2,6 @@ SystemJS.config({
     paths: {
         "npm:": "jspm_packages/npm/",
         "github:": "jspm_packages/github/",
-        "jspm17/": "src/"
     },
     transpiler: false,
     warnings: true,
@@ -12,56 +11,9 @@ SystemJS.config({
     packages: {
         "": {
             "defaultExtension": "js"
-        },
-        "npm:jquery-ui@1.12.1": {
-            "meta": {},
-            "map": {
-                "./data": "npm:jquery-ui@1.12.1/ui/data.js",
-                "./widget": "npm:jquery-ui@1.12.1/ui/widget.js",
-                "./disable-selection": "npm:jquery-ui@1.12.1/ui/disable-selection.js",
-                "./focusable": "npm:jquery-ui@1.12.1/ui/focusable.js",
-                "./form": "npm:jquery-ui@1.12.1/ui/form.js",
-                "./ie": "npm:jquery-ui@1.12.1/ui/ie.js",
-                "./keycode": "npm:jquery-ui@1.12.1/ui/keycode.js",
-                "./labels": "npm:jquery-ui@1.12.1/ui/labels.js",
-                "./jquery-1-7": "npm:jquery-ui@1.12.1/ui/jquery-1-7.js",
-                "./plugin": "npm:jquery-ui@1.12.1/ui/plugin.js",
-                "./safe-active-element": "npm:jquery-ui@1.12.1/ui/safe-active-element.js",
-                "./safe-blur": "npm:jquery-ui@1.12.1/ui/safe-blur.js",
-                "./scroll-parent": "npm:jquery-ui@1.12.1/ui/scroll-parent.js",
-                "./tabbable": "npm:jquery-ui@1.12.1/ui/tabbable.js",
-                "./unique-id": "npm:jquery-ui@1.12.1/ui/unique-id.js",
-                "./version": "npm:jquery-ui@1.12.1/ui/version.js",
-                "./widgets/draggable": "npm:jquery-ui@1.12.1/ui/widgets/draggable.js",
-                "./widgets/droppable": "npm:jquery-ui@1.12.1/ui/widgets/droppable.js",
-                "./widgets/resizable": "npm:jquery-ui@1.12.1/ui/widgets/resizable.js",
-                "./widgets/mouse": "npm:jquery-ui@1.12.1/ui/widgets/mouse.js"
-            },
-            "defaultExtension": "js"
-        },
-        "npm:gridstack@0.3.0": {
-            "map": {
-                "jquery-ui": "npm:jquery-ui@1.12.1",
-                "jquery": "npm:jquery@3.2.1",
-                "lodash": "npm:lodash@4.17.4"
-            }
-        }
-    },
-    meta: {
-        "npm:gridstack@0.3.0/dist/gridstack.js": {
-            "format": "amd"
-        },
-        "npm:gridstack@0.3.0/dist/gridstack.jQueryUi.js": {
-            "format": "amd",
-            "deps": [
-                "jquery-ui"
-            ]
         }
     },
     map: {
-        "gridstack": "npm:gridstack@0.3.0",
-        "jquery-ui": "npm:jquery-ui@1.12.1",
-        "lodash": "npm:lodash@4.17.4",
         "kendo.culture.en-GB.min": "lib/kendo/cultures/kendo.culture.en-GB.min.js",
         "kendo.messages.en-GB.min": "lib/kendo/messages/kendo.messages.en-GB.min.js",
         "kendo.autocomplete.min": "lib/kendo/kendo.autocomplete.min.js",
