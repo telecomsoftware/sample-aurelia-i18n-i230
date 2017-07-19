@@ -1,4 +1,6 @@
 {
     "test1": "test one in deutscher sprache",
-    "test2": "2nd test in deutscher sprache"
+    "test2": "2nd test in deutscher sprache",
+    "settings": "Einstellungen",
+    "logout": "Abmelden"
 }

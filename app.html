@@ -1,6 +1,7 @@
 <template>
     <require from="./my-panel"></require>
-    <h2>App</h2>
+    <require from="./my-context-menu"></require>
+    <h2 ref="headerElement">App</h2>
     <div>
         <button click.delegate="toggleIt()">Toggle Panel</button>
     </div>
@@ -17,4 +18,9 @@
         </div>
     </div>
     <div style="clear:both;"></div>
+
+    <my-context-menu target-element.bind="headerElement" show-on-click.one-time="true">
+        <li data-menuitem-id="settings" t="logout"></li>
+        <li data-menuitem-id="logout" t="settings"></li>
+    </my-context-menu>
 </template>
