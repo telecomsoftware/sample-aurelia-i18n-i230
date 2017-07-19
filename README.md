@@ -37,3 +37,17 @@ Uncaught DOMException: Failed to execute 'removeChild' on 'Node': The node to be
     at BehaviorPropertyObserver.setValue (http://localhost:9100/jspm_packages/npm/aurelia-templating@1.4.2/aurelia-templating.js:3548:18)
     at If.descriptor.set [as value] (http://localhost:9100/jspm_packages/npm/aurelia-templating@1.4.2/aurelia-templating.js:3657:43)
 ```
+
+Examine `my-thing.html` line 11 for a possible workaround:
+
+Instead of
+
+```
+<li data-menuitem-id="settings" t="logout"></li>
+```
+
+use this to avoid the problem:
+
+```
+<li data-menuitem-id="settings">${'logout' & t}</li>
+```

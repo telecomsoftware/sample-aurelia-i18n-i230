@@ -7,6 +7,8 @@
         <span ref="tElement">t (${'test2' & t})</span>
         <my-context-menu target-element.bind="tElement" show-on-click.one-time="true">
             <li data-menuitem-id="settings" t="logout"></li>
+            <!-- alternative version not causing the error: -->
+            <!-- <li data-menuitem-id="settings">${'logout' & t}</li> -->
         </my-context-menu>
     </div>
 </template>
