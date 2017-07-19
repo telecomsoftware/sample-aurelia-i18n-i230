@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "target": "es6",
+        "module": "amd",
+        "lib": [
+            "dom",
+            "es6",
+            "dom.iterable",
+            "scripthost"
+        ]
+    },
+    "files": [
+        "./*.ts",
+        "./jspm_packages/**/*.d.ts",
+        "./typings/**/*.d.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

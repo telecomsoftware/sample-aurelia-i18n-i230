@@ -1,0 +1,34 @@
+{
+    "name": "aurelia-i18n-issue-230",
+    "dependencies": {
+        "aurelia-binding": "github:aurelia/binding",
+        "aurelia-bootstrapper": "github:aurelia/bootstrapper",
+        "aurelia-dependency-injection": "github:aurelia/dependency-injection",
+        "aurelia-dialog": "github:aurelia/dialog",
+        "aurelia-event-aggregator": "github:aurelia/event-aggregator",
+        "aurelia-framework": "github:aurelia/framework",
+        "aurelia-history": "github:aurelia/history",
+        "aurelia-history-browser": "github:aurelia/history-browser",
+        "aurelia-http-client": "github:aurelia/http-client",
+        "aurelia-i18n": "github:aurelia/i18n",
+        "aurelia-loader": "github:aurelia/loader",
+        "aurelia-loader-default": "github:aurelia/loader-default",
+        "aurelia-logging": "github:aurelia/logging",
+        "aurelia-logging-console": "github:aurelia/logging-console",
+        "aurelia-metadata": "github:aurelia/metadata",
+        "aurelia-pal": "github:aurelia/pal",
+        "aurelia-pal-browser": "github:aurelia/pal-browser",
+        "aurelia-path": "github:aurelia/path",
+        "aurelia-polyfills": "github:aurelia/polyfills",
+        "aurelia-route-recognizer": "github:aurelia/route-recognizer",
+        "aurelia-router": "github:aurelia/router",
+        "aurelia-task-queue": "github:aurelia/task-queue",
+        "aurelia-templating": "github:aurelia/templating",
+        "aurelia-templating-binding": "github:aurelia/templating-binding",
+        "aurelia-templating-resources": "github:aurelia/templating-resources",
+        "aurelia-templating-router": "github:aurelia/templating-router"
+    },
+    "globalDependencies": {
+        "i18next": "registry:dt/i18next#2.3.4+20160803175212"
+    }
+}
