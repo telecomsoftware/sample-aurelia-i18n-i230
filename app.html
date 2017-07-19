@@ -1,26 +1,10 @@
 <template>
     <require from="./my-panel"></require>
-    <require from="./my-context-menu"></require>
-    <h2 ref="headerElement">App</h2>
+    <h2>App</h2>
     <div>
         <button click.delegate="toggleIt()">Toggle Panel</button>
     </div>
-
-    <div id="canvas">
-        <div id="wall" style="width:20%; float: left; border: 1px solid gray;">
-            Wall
-        </div>
-        <div id="panel" style="width:10%; float: left; border: 1px solid red;">
-            <div>
-                Panel
-            </div>
-            <my-panel is-mini-mode.bind="!showPanel"></my-panel>
-        </div>
+    <div id="canvas" style="width:40%; border: 1px solid gray;">
+        <my-panel is-mini-mode.bind="!showPanel"></my-panel>
     </div>
-    <div style="clear:both;"></div>
-
-    <my-context-menu target-element.bind="headerElement" show-on-click.one-time="true">
-        <li data-menuitem-id="settings" t="logout"></li>
-        <li data-menuitem-id="logout" t="settings"></li>
-    </my-context-menu>
 </template>
