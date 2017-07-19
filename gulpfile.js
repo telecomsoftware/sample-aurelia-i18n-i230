@@ -1,6 +1,36 @@
 var gulp = require('gulp');
 var bs = require('browser-sync');
 var ts = require('gulp-typescript');
+var bundler = require('aurelia-bundler');
+
+let bundleConfig = {
+    force: true,
+    baseURL: '.',
+    configPath: './jspm.config.js',
+    bundles: {
+        "dist/bundle": {
+            "includes": [
+                "app.js",
+                "app.html!text",
+                "main.js",
+                "my-context-menu.html!text",
+                "my-context-menu.js",
+                "my-panel.html!text",
+                "my-panel.js",
+                "my-thing.html!text",
+                "my-thing.js",
+
+                "jquery",
+                "font-awesome",
+
+                "aurelia-framework",
+                "aurelia-bootstrapper",
+                "aurelia-router",
+                "aurelia"
+            ]
+        }
+    }
+};
 
 function serve(done) {
     let opts = {
@@ -37,6 +67,16 @@ function watch() {
     return gulp.watch('./*.ts', gulp.series(notifyCompile, compile, reload));
 }
 
-gulp.task('default', gulp.series(compile, serve, watch));
+function unbundle() {
+    return bundler.unbundle(bundleConfig);
+}
+
+function bundle() {
+    return bundler.bundle(bundleConfig);
+}
+
+gulp.task('default', gulp.series(unbundle, compile, serve, watch));
 gulp.task('serve', serve);
-gulp.task('compile', compile);
+gulp.task('compile', gulp.series(unbundle, compile));
+gulp.task('unbundle', unbundle);
+gulp.task('bundle', gulp.series(unbundle, compile, bundle));

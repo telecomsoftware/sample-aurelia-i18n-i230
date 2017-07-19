@@ -9,6 +9,7 @@
   "author": "telecommunication software",
   "license": "MIT",
   "devDependencies": {
+    "aurelia-bundler": "^0.6.3",
     "browser-sync": "^2.18.12",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-typescript": "^3.2.1",
