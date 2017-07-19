@@ -1,0 +1,5 @@
+<template>
+    <div repeat.for="thing of things">
+        <compose view-model.bind="thing.vmInstance" model.bind="thing.model"></compose>
+    </div>
+</template>
