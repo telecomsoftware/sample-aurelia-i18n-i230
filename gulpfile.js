@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var browserSync = require('browser-sync');
+var bs = require('browser-sync');
 var ts = require('gulp-typescript');
 
 function serve(done) {
@@ -13,7 +13,7 @@ function serve(done) {
             baseDir: '.'
         }
     };
-    browserSync(opts, done);
+    bs(opts, done);
 }
 
 function compile() {
@@ -23,5 +23,20 @@ function compile() {
         .pipe(gulp.dest("./"));
 }
 
-gulp.task('default', gulp.series(compile, serve));
+function notifyCompile(done) {
+    bs.notify("Compiling...");
+    done();
+}
+
+function reload(done) {
+    bs.reload();
+    done();
+}
+
+function watch() {
+    return gulp.watch('./*.ts', gulp.series(notifyCompile, compile, reload));
+}
+
+gulp.task('default', gulp.series(compile, serve, watch));
 gulp.task('serve', serve);
+gulp.task('compile', compile);
