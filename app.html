@@ -1,6 +1,10 @@
 <template>
     <require from="./my-panel"></require>
     <h2>App</h2>
+    <p>The toggle switches between two states, one showing &quot;thing&quot; and one showing &quot;t&quot;. You can click on
+        the &quot;t&quot; to get a Kendo UI context menu.<br /> Open the browser console to see the error message when toggling.
+        Note that the exception also breaks Aurelia DOM updates and there is sometimes only one &quot;t&quot; or one &quot;thing&quot;
+        also there should always be two of them.</p>
     <div>
         <button click.delegate="toggleIt()">Toggle Panel</button>
     </div>
